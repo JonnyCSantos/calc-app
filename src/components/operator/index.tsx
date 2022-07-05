@@ -1,8 +1,9 @@
 interface operatorTypes {
-  type: string
+  type: string,
+  onClick?: any
 }
 
 export const Operator = (props:operatorTypes) => {
-  const { type } = props
-  return <button>{type}</button>
+  const { type, onClick } = props
+  return <button onClick={onClick}>{type}</button>
 }
